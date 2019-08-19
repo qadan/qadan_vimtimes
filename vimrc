@@ -7,6 +7,7 @@ set colorcolumn=80
 set mouse=a
 set title
 set ruler
+set showmatch
 filetype plugin indent on
 if has("autocmd")
   " Drupal *.module and *.install files.
@@ -19,6 +20,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.view set filetype=php
   augroup END
 endif
+autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 syntax enable
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 let g:solarized_termcolors=256
